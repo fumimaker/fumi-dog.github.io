@@ -1,5 +1,6 @@
 img {
   width: 80%; /* bodyの幅に対する割合 */
+  margin: auto;
 }
 @media (prefers-color-scheme: dark) {
   body {
