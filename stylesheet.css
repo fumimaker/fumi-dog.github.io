@@ -1,5 +1,5 @@
 img {
-  width: 100%; /* bodyの幅に対する割合 */
+  width: 80%; /* bodyの幅に対する割合 */
 }
 @media (prefers-color-scheme: dark) {
   body {
