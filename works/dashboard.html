@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>データ可視化ダッシュボード - Fumi's Portfolio</title>
+  <link rel="stylesheet" href="../stylesheet.css" type="text/css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="../index.html">Fumi</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../works.html">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">SaaS / Dashboard</p>
+        <h1>データ可視化ダッシュボード</h1>
+        <p class="lead">リアルタイム集計とフィルタリングを備えた管理画面。情報設計とUI実装を担当し、操作ステップを削減。</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="md-body" id="md-content"></div>
+      <script type="text/markdown" id="md-source">
+## 概要
+- 事業KPIを横断的に確認できるダッシュボードを新規構築
+- 情報設計・デザインシステム整備・実装を担当
+
+## 役割
+- 要件整理／データ表示要件とUXの擦り合わせ
+- UIデザイン（フィルタ、グラフ、カードレイアウト）
+- フロントエンド実装（React + TypeScript + Chart.js）
+- コンポーネントのStorybook化とアクセシビリティ確認
+
+## 成果
+- 主要指標の確認に必要なクリック数を約30%削減
+- グラフ読み込み体感速度を約35%改善（スケルトン表示導入）
+- 新規フィルタ追加にかかる工数を1/2に短縮（コンポーネント化）
+
+## 技術スタック
+- React, TypeScript, Chart.js, Storybook
+- API: REST / JWT / キャッシュ層はSWRで制御
+
+## スクリーンショット（差し替えてください）
+![スクリーンショットの例](../dachshund.jpg)
+
+## メモ（編集のヒント）
+- Markdownを書き換えるだけで本文が更新されます。
+- スクリーンショットは `../images/` に置き、上のパスを差し替えてください。
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Fumi's Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+  <script>
+    const source = document.getElementById('md-source').textContent.trim();
+    const md = window.markdownit({ html: true, linkify: true, breaks: true });
+    document.getElementById('md-content').innerHTML = md.render(source);
+  </script>
+</body>
+</html>

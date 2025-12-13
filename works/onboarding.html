@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>オンボーディング最適化 - Fumi's Portfolio</title>
+  <link rel="stylesheet" href="../stylesheet.css" type="text/css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="../index.html">Fumi</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../works.html">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Growth</p>
+        <h1>オンボーディング最適化</h1>
+        <p class="lead">初期定着率を高めるため、導線とメッセージを再設計。プロダクトツアーやコンテンツ導線を追加。</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="md-body" id="md-content"></div>
+      <script type="text/markdown" id="md-source">
+## 概要
+- 新規ユーザーの初回活性化率が低下していたため、オンボーディングを再設計
+- メール、アプリ内モーダル、ツアーを統合したコミュニケーションに変更
+
+## 役割
+- リサーチ：ファネル分析・ユーザーインタビューで阻害要因を特定
+- UX：導線設計、CTAメッセージ、ツアーステップのシナリオ策定
+- 実装：フロント実装＋バックエンドのフラグ制御、メッセージ配信ロジック設計
+- 計測：イベント設計とダッシュボード化
+
+## 成果
+- 初期定着率を向上（例: 7日後アクティブ率 +9pt）
+- ヘルプデスクへの同種問い合わせを削減
+- コンテンツ閲覧率・CTAクリック率が改善
+
+## 技術スタック
+- Front: React, TypeScript
+- Back: Django (Feature Flag制御), Segment / GA4で計測
+- Communication: In-appメッセージ + メール
+
+## スクリーンショット（差し替え推奨）
+![オンボーディングの例](../dachshund.jpg)
+
+## メモ
+- テキストと画像は自由に差し替えてください。
+- Markdownで書いて、保存するだけでページに反映されます。
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Fumi's Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+  <script>
+    const source = document.getElementById('md-source').textContent.trim();
+    const md = window.markdownit({ html: true, linkify: true, breaks: true });
+    document.getElementById('md-content').innerHTML = md.render(source);
+  </script>
+</body>
+</html>

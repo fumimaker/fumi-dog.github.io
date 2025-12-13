@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>内部オペレーション自動化 - Fumi's Portfolio</title>
+  <link rel="stylesheet" href="../stylesheet.css" type="text/css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="../index.html">Fumi</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../works.html">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">System / Ops</p>
+        <h1>内部オペレーション自動化</h1>
+        <p class="lead">社内手続きのワークフローをAPI化し、スプレッドシートやSlackと連携。日次工数を削減。</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="md-body" id="md-content"></div>
+      <script type="text/markdown" id="md-source">
+## 概要
+- バックオフィスの手続きが属人化していたため、ワークフローを自動化
+- 申請・承認・通知までを一貫した仕組みに置き換え
+
+## 役割
+- 要件整理：現場ヒアリングで現行フローを棚卸し
+- 設計：API化、スプレッドシートとの同期、Slack通知の構成を設計
+- 実装：FastAPI + GCPでAPI、Apps Scriptでシート連携、Slack Appで通知
+- 運用：権限・ログ管理、運用マニュアル作成
+
+## 成果
+- 日次工数を約50%削減、手戻りを大幅低減
+- 実行履歴の可視化で監査対応が容易に
+- 例外処理をコード化し、属人タスクを排除
+
+## 技術スタック
+- Backend: Python (FastAPI), Cloud Run, Firestore
+- Integrations: Google Apps Script, Slack App (Bolt)
+- Auth: JWT + IP制限、監査ログ
+
+## スクリーンショット（差し替え推奨）
+![ワークフローの例](../dachshund.jpg)
+
+## メモ
+- 文章・スクショは自由に編集してください。
+- 画像パスは `../images/` 配下のファイルに置き換えると管理しやすいです。
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Fumi's Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+  <script>
+    const source = document.getElementById('md-source').textContent.trim();
+    const md = window.markdownit({ html: true, linkify: true, breaks: true });
+    document.getElementById('md-content').innerHTML = md.render(source);
+  </script>
+</body>
+</html>

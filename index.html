@@ -1,18 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>fumi.dog</title>
-  <link rel="stylesheet" href="stylesheet.css" type="text/css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fumi's Portfolio</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
 </head>
 <body>
-  <h1>fumi-dog</h1>
-  <img src="dachshund.jpg" alt="dachshund">
-  <h1>Profile</h1>
-  <h2>Updates</h2>
-  2023/03/08 爆誕<br>
-  2023/03/15 fumi-dog追加<br>
-  2023/04/05 Updates追加<br>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="index.html">Fumi</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="works.html" class="pill-link">詳細な実績</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Hardwares / Low-Level Softwares</p>
+          <h1>つくる・磨く・遊ぶ。</h1>
+          <p class="lead">
+            これまでに作ったもの、関わったプロジェクトの一部を紹介します。
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">相談してみる</a>
+            <a class="btn ghost" href="works.html">作ったものを見る</a>
+          </div>
+          <div class="hero-tags">
+            <span class="tag">プロトタイプ開発</span>
+            <span class="tag">電子回路設計・実装</span>
+			<span class="tag">ソフトウェア開発</span>
+			<span class="tag">FPGA開発</span>
+            <span class="tag">ネットワーク・サーバ</span>
+			<span class="tag">電気工事</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img src="dachshund.jpg" alt="Fumi's portrait" class="profile-pic">
+            <div class="stat">
+              <p class="stat-label">最近の取り組み</p>
+              <p class="stat-value">SaaSダッシュボード / モバイルUI / CMS連携</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">得意領域</p>
+              <p class="stat-value">React / Vue / Python / Design Systems</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="section-header">
+        <h2>About</h2>
+        <p>課題の解像度を上げ、最短で価値を届けるための動きをします。</p>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>
+            要件定義からUI設計、実装、リリース後の改善まで一気通貫で伴走します。
+            ユーザー行動を観察し、数字と肌感の両方を頼りに最適な打ち手を選びます。
+          </p>
+          <div class="pill-row">
+            <span class="pill">発見→設計→実装→検証の短サイクル</span>
+            <span class="pill">デザインと実装の行き来</span>
+            <span class="pill">チーム開発の土台づくり</span>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <p class="info-title">プロダクト志向</p>
+            <p>ユーザー価値・事業インパクトの両軸で優先度を整理し、段階的にリリース。</p>
+          </div>
+          <div class="info-card">
+            <p class="info-title">コラボレーション</p>
+            <p>デザイナー・PdM・エンジニア間の翻訳を得意とし、認識合わせを高速化。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <p>設計から運用までカバーし、必要に応じて深掘りします。</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <p class="skill-title">Frontend</p>
+            <p class="skill-body">React / Next.js / Vue / TypeScript / Tailwind / Storybook</p>
+          </div>
+          <div class="skill-card">
+            <p class="skill-title">Backend</p>
+            <p class="skill-body">Python (Django, Flask) / Node.js / API設計 / 認証・権限管理</p>
+          </div>
+          <div class="skill-card">
+            <p class="skill-title">Design &amp; Ops</p>
+            <p class="skill-body">UIモック / デザインシステム / Figma連携 / CI/CD / Observability</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-header">
+        <h2>Works</h2>
+        <p>最近手がけたプロジェクトのハイライトです。詳細は実績ページへ。</p>
+      </div>
+      <div class="work-grid">
+        <a class="work-card" href="works/dashboard.html">
+          <div class="work-meta">SaaS / Dashboard</div>
+          <h3>データ可視化ダッシュボード</h3>
+          <p>リアルタイム集計・フィルタリングを備えた管理画面。UX改善とデザインシステム整理を担当。</p>
+        </a>
+        <a class="work-card" href="works/reservation.html">
+          <div class="work-meta">Mobile Web</div>
+          <h3>予約フロー改善</h3>
+          <p>モバイルでの予約完了率を改善。フォーム分割・バリデーションUIの見直しでCVRを向上。</p>
+        </a>
+        <a class="work-card" href="works/onboarding.html">
+          <div class="work-meta">Growth</div>
+          <h3>オンボーディング最適化</h3>
+          <p>ファネル分析からメール・アプリ内導線を再設計。初期定着率を改善。</p>
+        </a>
+      </div>
+      <div class="work-cta">
+        <a class="btn ghost" href="works.html">もっと見る</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>案件のご相談やカジュアルなお話でもお気軽にどうぞ。</p>
+        </div>
+        <div class="contact-card">
+          <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+          <p class="contact-links">
+            <a href="https://github.com/your-github" target="_blank" rel="noopener">GitHub</a>
+            <span>／</span>
+            <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener">Twitter</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Fumi's Portfolio</p>
+    </div>
+  </footer>
 </body>
 </html>

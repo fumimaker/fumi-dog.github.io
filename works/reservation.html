@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>予約フローリニューアル - Fumi's Portfolio</title>
+  <link rel="stylesheet" href="../stylesheet.css" type="text/css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="../index.html">Fumi</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../works.html">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Mobile Web</p>
+        <h1>予約フローリニューアル</h1>
+        <p class="lead">スマホでの予約完了率を改善。フォーム設計とバリデーションUIを再設計し、CVRを向上。</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="md-body" id="md-content"></div>
+      <script type="text/markdown" id="md-source">
+## 概要
+- モバイル予約の離脱率が高い課題に対し、フロー全体を再設計
+- ファネル分析から離脱ポイントを特定し、UI/UXを刷新
+
+## 役割
+- 分析：GA4とヒートマップで離脱箇所を特定
+- UX設計：入力ステップ分割、エラーメッセージの即時表示
+- 実装：Vue.js + Firebaseでフロント実装、フォームバリデーション共通化
+- ABテスト：2パターンを運用し、改善案を定量評価
+
+## 成果
+- CVR +12%（ABテストで統計的有意を確認）
+- 入力エラーの再入力率を減少、完了までの平均時間を短縮
+- CS問い合わせを月次で約20%削減
+
+## 技術スタック
+- Vue.js, Firebase, GA4, Cloud Functions
+- Design: コンポーネント化 + Storybookで共有
+
+## スクリーンショット（差し替え推奨）
+![予約フローのUI例](../dachshund.jpg)
+
+## メモ
+- テキスト・数値・画像の差し替えだけで更新できます。
+- 実際のスクショは `../images/` 配下に置き、パスを変更してください。
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Fumi's Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+  <script>
+    const source = document.getElementById('md-source').textContent.trim();
+    const md = window.markdownit({ html: true, linkify: true, breaks: true });
+    document.getElementById('md-content').innerHTML = md.render(source);
+  </script>
+</body>
+</html>
